@@ -13,6 +13,8 @@ y determine el importe en efectivo a pagar por dicho socio.
  */
 package extra.pkg5;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Cristian
@@ -23,7 +25,34 @@ public class Extra5 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+                       
+        System.out.print("Ingrese el tipo de obra social que posee (A/B/C): ");
+        char obra=sc.next().toUpperCase().charAt(0);
+        String opcion = String.valueOf(obra);
         
+      
+        while (!opcion.equals("A") && !opcion.equals("B") && !opcion.equals("C")) {
+            System.out.print("Dato mal ingresado, intente de nuevo: ");
+            obra=sc.next().toUpperCase().charAt(0);
+            opcion=String.valueOf(obra);
+        }
+                
+        System.out.print("Ingrese el monto del tratamiento: ");
+        double precio=sc.nextDouble();
+                        
+        switch (opcion) {
+            case "A":
+                System.out.println("El monto a pagar con descuento es: " + (precio-(precio*0.5)));
+                break;
+            case "B":
+                System.out.println("El monto a pagar con descuento es: " + (precio-(precio*0.35)));
+                break;
+            case "C":
+                System.out.println("Ud no posee descuentos, el monto a pagar es: " + precio);
+                break;
+                            
+            }
     }
     
 }
