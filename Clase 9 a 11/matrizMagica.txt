@@ -1,0 +1,165 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package arrays6;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Guido
+ */
+public class Arrays6 {
+
+    /**
+    
+     */
+    
+    public static final Scanner sc = new Scanner(System.in);
+    
+    public static void main(String[] args) {
+        
+     
+        comprobarMagia(crearMatriz());
+        
+    }
+    
+    
+    public static int[][] crearMatriz (){
+        
+        int[][] matriz = new int[3][3];
+        
+        System.out.println("Ingrese los valores para la tabla, debe ser de 1 a 9");
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                System.out.println("Valor para " + "[" + i + "]" + "[" + j + "]");
+                int value = sc.nextInt();
+                if (value < 1 || value > 9){
+                    j--;
+                    System.out.println("Valor incorrecto, intente de nuevo");                   
+                }else{
+                    matriz[i][j] = value;
+                }
+            }
+        }
+        
+        mostrarMatriz(matriz);
+        
+        return matriz;
+        
+    }
+    
+    public static void mostrarMatriz (int[][] matriz){
+        
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                System.out.print("[" + matriz[i][j] + "]");
+            }
+            System.out.println("");
+        }
+        
+    }
+    
+    public static void comprobarMagia(int[][] matriz){
+        
+        int valorMagico = 0;
+        int magique = 0;
+      
+        ///ALMACENAMOS EL VALOR MAGICO QUE USAREMOS COMO REFERENCIA 
+        for (int i = 0; i < 1; i++) {
+            for (int j = 0; j < 3; j++) {              
+                valorMagico+= matriz[i][j];  
+            }
+        }
+        
+        /////////////////////////////////////////////////////////////
+        //  ========== FILAS =========== // 
+        
+        /*
+        UN CONTADOR VA SUMANDO LOS 3 VALORES DE J EN CADA FILA Y VUELVE A 0 CUANDO COMIENZA UNA FILA NUEVA, SI AL LLEGAR AL FINAL DE LA FILA
+        EL CONTADOR ES IGUAL AL VALOR MAGICO, SUMA 1 AL CHECK DE FILAS
+        SI AL TERMINAR DE RECORRER TODAS LAS FILAS EL CHECK ES = A 3. ES PORQUE TODAS LAS FILAS SUMAN
+        LO MISMO, ES DECIR, SON MAGICAS.
+         */
+        
+        int sumadorFilas = 0;
+        int checkFilas = 0;
+        
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                sumadorFilas+= matriz[i][j];
+                    if (j == 2 && sumadorFilas == valorMagico){
+                        checkFilas++;
+                    }
+            }
+            sumadorFilas = 0;
+        }
+        
+        if (checkFilas == 3) {
+            magique++;
+            System.out.println("Todas las filas son magicas");
+        }
+        
+        ////////////////////////////////////////////////////////////
+        //  ========== COLUMNAS =========== // 
+        /*
+            HACEMOS EL MISMO PROCESO CON NUEVAS VARIABLES PARA LAS COLUMNAS, EL BUCLE ANIDA ARRANCA RECORRIENDO I
+            Y AL LLIGAR AL FINAL DE LA COLUMNA CAMBIA A LA SIGUIENTE FILA PARA SEGUIR EVALUANDO COLUMNAS
+            SI EL CHECK DE COLUMNAS ES = 3 ENTONCES TODAS LAS COLUMNAS SON MAGICAS
+         */
+        
+        int sumadorColumnas = 0;
+        int checkColumnas = 0;
+        
+        for (int j = 0; j < 3; j++) {
+            for (int i = 0; i < 3; i++) {
+                sumadorColumnas+= matriz[i][j];
+                    if (i == 2 && sumadorColumnas == valorMagico){
+                        checkColumnas++;
+                    }
+            }
+            sumadorColumnas = 0;
+        }
+        
+        if (checkColumnas == 3) {
+            magique++;
+            System.out.println("Todas las filas son magicas");
+        }
+        
+        ////////////////////////////////////////////////////////////
+        //  ========== DIAGONAL 1 =========== // 
+        
+        int sumadorD1 = 0;
+        
+        
+        
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                if (i == j){
+                    sumadorD1 += matriz[i][j];
+                }
+            }
+        }
+        
+        if (sumadorD1 == valorMagico){
+            magique++;
+            System.out.println("La diagonal principal es magica");
+        }
+        
+        ///////////////////////////////////////////////////////////
+        
+        if (matriz[0][2] + matriz[1][1] + matriz[2][0] == valorMagico){
+            magique++;
+            System.out.println("La diagonal secundaria es magica");
+        }
+        
+        if (magique == 4){
+            System.out.println("Toda la matriz es MAGIQUE");
+        }
+        
+        
+    }
+    
+}
