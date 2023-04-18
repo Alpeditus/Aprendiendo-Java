@@ -1,0 +1,133 @@
+package com.mycompany.poon8;
+
+import Entidades.CuentaBancaria;
+import Servicios.CuentaBancariaServicio;
+
+/**
+ *
+ * @author javiervillalba
+ */
+public class POON8 {
+
+    public static void main(String[] args) {
+     
+        CuentaBancariaServicio cbs = new CuentaBancariaServicio (); 
+        CuentaBancaria c1 = cbs.crearCuenta();
+        cbs.ingresar(c1);
+        cbs.retirar(c1);
+        cbs.extraccionRapida(c1);
+        cbs.consultarSaldo(c1);
+        cbs.consultarDatos(c1);
+        
+        
+    }
+}
+
+
+
+
+public class CuentaBancaria {
+   private int numeroCuenta;
+   private Long dniCliente;
+   private double saldoActual;
+
+    public CuentaBancaria() {
+    }
+
+    public CuentaBancaria(int numeroCuenta, Long dniCliente, double saldoActual) {
+        this.numeroCuenta = numeroCuenta;
+        this.dniCliente = dniCliente;
+        this.saldoActual = saldoActual;
+    }
+
+    public int getNumeroCuenta() {
+        return numeroCuenta;
+    }
+
+    public void setNumeroCuenta(int numeroCuenta) {
+        this.numeroCuenta = numeroCuenta;
+    }
+
+    public Long getDniCliente() {
+        return dniCliente;
+    }
+
+    public void setDniCliente(Long dniCliente) {
+        this.dniCliente = dniCliente;
+    }
+
+    public double getSaldoActual() {
+        return saldoActual;
+    }
+
+    public void setSaldoActual(double saldoActual) {
+        this.saldoActual = saldoActual;
+    }
+
+    @Override
+    public String toString() {
+        return "CuentaBancaria{" + "numeroCuenta=" + numeroCuenta + ", dniCliente=" + dniCliente + ", saldoActual=" + saldoActual + '}';
+    }
+   
+   
+   
+}
+
+public class CuentaBancariaServicio {
+
+    Scanner leer = new Scanner(System.in);
+//Crea un objeto de tipo cuenta bancaria
+    public CuentaBancaria crearCuenta() {
+        System.out.println("Ingrese el n£mero de cuenta");
+
+        int numeroCuenta = leer.nextInt();
+        System.out.println("Ingrese el DNI del cliente");
+        
+        Long dniCliente = leer.nextLong();
+        
+        System.out.println("Ingrese el saldo inicial");
+        double saldoActual = leer.nextDouble();
+
+        return new CuentaBancaria(numeroCuenta, dniCliente, saldoActual);
+    }
+  //Crea un m‚todo que recibe una cuenta bancaria por par metro y permite iongresarle dinero. 
+    public void ingresar (CuentaBancaria c){
+        System.out.println("Cu nto dinero desea ingresar?");
+        c.setSaldoActual(c.getSaldoActual()+leer.nextDouble());
+        System.out.println("Dinero ingresado, su saldo es: " + c.getSaldoActual());
+        
+    }
+    public void retirar(CuentaBancaria c) {
+        System.out.println("Cu nto dinero desea retirar?");
+        double retiro = leer.nextDouble();
+
+        if (retiro > c.getSaldoActual()) {
+            System.out.println("Saldo insuficiente. Se retirar  lo que haya en la cuenta");
+            System.out.println("Se retir¢: " + c.getSaldoActual() + " y la cuenta qued¢ en 0");
+            c.setSaldoActual(0);
+        } else {
+            c.setSaldoActual(c.getSaldoActual() - retiro);
+            System.out.println("Su saldo es " + c.getSaldoActual());
+        }
+
+    }
+    public void extraccionRapida (CuentaBancaria c) {
+        if (c.getSaldoActual()>=1000) {
+            c.setSaldoActual(c.getSaldoActual()-(c.getSaldoActual()*0.2));
+            System.out.println("Tu saldo restante es " + c.getSaldoActual());
+            }else {
+            System.out.println("Fondos insuficientes");
+        }
+        
+    }
+    public void consultarSaldo (CuentaBancaria c) {
+        System.out.println("Su saldo es " + c.getSaldoActual() );
+        
+    }
+    
+    public void consultarDatos (CuentaBancaria c) {
+        System.out.println(c.toString());
+        
+                
+    }
+}

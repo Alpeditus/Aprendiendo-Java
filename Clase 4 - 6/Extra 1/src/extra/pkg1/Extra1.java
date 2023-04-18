@@ -20,12 +20,18 @@ public class Extra1 {
         Scanner sc = new Scanner(System.in);
         
         System.out.print("Ingrese tiempo en minutos: ");
-        double minuto=sc.nextDouble();
-        double hora=minuto/60;
-        double dia=hora/24;
+        int minuto=sc.nextInt();
+        int dia=minuto/1440;
+        int hora=minuto/60;
+        while (hora>24) {
+            hora-=24;
+        }
+        while (minuto>60) {
+            minuto-=60;
+        }
         
-        System.out.println("Los minutos ingresados son: " + hora + " horas y " + dia + " días.");
-        
+        System.out.println("Los minutos ingresados son " + dia + " día, " + hora + " horas y " + minuto + " minutos.");
+      
     }
     
 }

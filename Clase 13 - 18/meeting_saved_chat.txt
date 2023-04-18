@@ -1,0 +1,154 @@
+19:06:00 De  Valeria Carolina Riosa  a  Todos:
+	me puso el feeback  del viernes
+19:06:07 De  Valeria Carolina Riosa  a  Todos:
+	y el pulso que ya habia dado
+19:06:23 De  Lucas Paruolo  a  Todos:
+	no aparece
+19:06:31 De  hernan  a  Todos:
+	tambien me sigue pidiendo dar el precente
+19:06:35 De  Victoria Benitez  a  Todos:
+	refresca la pagina
+19:06:45 De  Victoria Benitez  a  Todos:
+	y da el presente y te aparece
+19:06:50 De  Miguel  a  Todos:
+	222
+19:06:55 De  hernan  a  Todos:
+	si la refresco me pide dar el presente cada vez que la refresco
+19:07:22 De  Victoria Benitez  a  Todos:
+	da el presente y espera un tok
+19:07:26 De  MESS10  a  Todos:
+	Replying to "si la refresco me pi..."
+	
+	me pasa lo mismo
+19:07:42 De  Lautaro Molina  a  Todos:
+	Replying to "si la refresco me pi..."
+	
+	x3
+19:07:48 De  Aylen Aude  a  Todos:
+	idem
+19:07:50 De  hernan  a  Todos:
+	ya se acomodo
+19:07:57 De  Lucas Sawchik  a  Todos:
+	Replying to "si la refresco me pi..."
+	
+	x4
+19:08:14 De  Natalia Rodriguez  a  Todos:
+	Replying to "si la refresco me pi..."
+	
+	x5
+19:08:32 De  Elias Barreto  a  Todos:
+	Replying to "si la refresco me pi..."
+	
+	x6
+19:08:46 De  Diego M  a  Todos:
+	Replying to "si la refresco me pi..."
+	
+	x7
+19:09:04 De  Jesus Adrian Vega  a  Todos:
+	cierren y vuelvan abrir el navegador. al menso así me funciono a mi.
+19:11:15 De  Raúl Vallejos  a  Todos:
+	Cómo están . Buenas tardes
+19:50:55 De  MÜLLER Malena  a  Todos:
+	public class Libro {	    private String ISBN,Titulo,Autor;	    private int numPag;		    public Libro() {	    }		    public Libro(String ISBN, String Titulo, String Autor, int numPag) {	        this.ISBN = ISBN;	        this.Titulo = Titulo;	        this.Autor = Autor;	        this.numPag = numPag;	    }		    public String getISBN() {	        return ISBN;	    }		    public void setISBN(String ISBN) {	        this.ISBN = ISBN;	    }		    public String getTitulo() {	        return Titulo;	    }		    public void setTitulo(String Titulo) {	        this.Titulo = Titulo;	    }		    public String getAutor() {	        return Autor;	    }		    public void setAutor(String Autor) {	        this.Autor = Autor;	    }		    public int getNumPag() {	        return numPag;	    }		    public void setNumPag(int numPag) {	        this.numPag = numPag;	    }	    	    public static void cargarLibro (String ISBN, String Titulo, String Autor, int numPag){	        Scanner sc = new Scanner(System.in);	        System.out.println("Ingres
+19:53:46 De  Saúl Maximiliano Mamaní Dib  a  Todos:
+	Libro nuevolibro = libro()
+19:53:50 De  Saúl Maximiliano Mamaní Dib  a  Todos:
+	Así?
+19:54:35 De  Saúl Maximiliano Mamaní Dib  a  Todos:
+	libro Algo = new libro()
+19:54:38 De  Saúl Maximiliano Mamaní Dib  a  Todos:
+	Así
+19:55:07 De  Marcela Garcia  a  Todos:
+	// Método main para probar la clase Libro	    public static void main(String[] args) {	        // Creamos un objeto libro1 con el constructor vacío	        LibroMain libro1 = new LibroMain();	        // Cargamos los datos del libro1 mediante el método cargarLibro()	        libro1.cargarLibro();	        // Imprimimos los datos del libro1 mediante el método imprimirDatosLibro()	        libro1.imprimirDatosLibro();
+19:59:23 De  Saúl Maximiliano Mamaní Dib  a  Todos:
+	Hagan un package y dentro armand las clases!
+19:59:38 De  Saúl Maximiliano Mamaní Dib  a  Todos:
+	Comparto pantalla?
+19:59:46 De  Saúl Maximiliano Mamaní Dib  a  Todos:
+	Quieren?
+20:00:31 De  Fede Tula  a  Todos:
+	meta
+20:00:34 De  Fede Tula  a  Todos:
+	comparti
+20:05:59 De  Saúl Maximiliano Mamaní Dib  a  Todos:
+	pero lo tengo distinto yo
+20:08:53 De  Guido Battigelli  a  Todos:
+	System.out.println("ISBN: " + l.getISBN());	        System.out.println("Titulo: " + l.getTitulo());	        System.out.println("Autor " + l.getAutor());	        System.out.println("Paginas: " + l.getPaginas());
+20:10:49 De  Guido Battigelli  a  Todos:
+	public static void mostrarLibro(Libro l){	        	        System.out.println("ISBN: " + l.getISBN());	        System.out.println("Titulo: " + l.getTitulo());	        System.out.println("Autor " + l.getAutor());	        System.out.println("Paginas: " + l.getPaginas());	        	    }
+20:20:03 De  Guido Battigelli  a  Todos:
+	Libro nb = Libro.cargarLibro();	        Libro.mostrarLibro(nb);
+20:46:13 De  Luis Chavez  a  Todos:
+	package ejercicio.pkg1;		import java.util.Scanner;		/**	 *	 * @author arLuChavez	 */	public class Libro {	    private String ISBN, Titulo, Autor;	    private int numpag;		    public Libro() {	    }		    public Libro(String ISBN, String Titulo, String Autor, int numpag) {	        this.ISBN = ISBN;	        this.Titulo = Titulo;	        this.Autor = Autor;	        this.numpag = numpag;	    }		    public String getISBN() {	        return ISBN;	    }		    public void setISBN(String ISBN) {	        this.ISBN = ISBN;	    }		    public String getTitulo() {	        return Titulo;	    }		    public void setTitulo(String Titulo) {	        this.Titulo = Titulo;	    }		    public String getAutor() {	        return Autor;	    }		    public void setAutor(String Autor) {	        this.Autor = Autor;	    }		    public int getNumpag() {	        return numpag;	    }		    public void setNumpag(int numpag) {	        this.numpag = numpag;	    }	    	    public void cargarLibro (){	        Scanner sc = new Scanner(System.in);
+20:46:26 De  Luis Chavez  a  Todos:
+	package ejercicio.pkg1;	import java.util.Scanner;	/**	 *	 * @author arLuChavez	 */	public class Ejercicio1 {		    /**	     * @param args the command line arguments	     */	    public static void main(String[] args) {	        Libro miLibro = new Libro();	        miLibro.cargarLibro();	        miLibro.Mostrar();	        	    }	    	}
+20:46:50 De  Saúl Maximiliano Mamaní Dib  a  Todos:
+	Puedo compartir?
+20:49:19 De  Paulo Giménez  a  Todos:
+	pasalo al código saul
+20:49:33 De  Saúl Maximiliano Mamaní Dib  a  Todos:
+	VAA
+20:51:45 De  Cristian Castillo  a  Todos:
+	Gente, los voy dejando, tengo que hacer unas cositas del laburo.	Se chorearon 200 litros de combustible y ahora todos estamos en la mira por los procedimientos. 🤦‍♂️
+20:52:15 De  Paulo Giménez  a  Todos:
+	faaa
+20:52:20 De  Paulo Giménez  a  Todos:
+	que te sea leve
+20:53:11 De  MÜLLER Malena  a  Todos:
+	uy cris que garrón
+20:53:18 De  MÜLLER Malena  a  Todos:
+	suerte con eso
+20:53:20 De  Saúl Maximiliano Mamaní Dib  a  Todos:
+	se los paso?
+20:53:25 De  Fede Tula  a  Todos:
+	dale
+20:53:28 De  MÜLLER Malena  a  Todos:
+	si porfaaa
+20:54:45 De  Saúl Maximiliano Mamaní Dib  a  Todos:
+	Ya veré como le hago con el repo. todavía no logré que alguien me ayude a terminar git 2
+20:57:27 De  Guido Battigelli  a  Todos:
+	public void crearCircunferencia(){	        Scanner sc = new Scanner(System.in);	        System.out.println("Ingrese el radio de la circunferencia");	        this.radio = sc.nextDouble();	    }	    	    public void area(){	        double area = Math.PI*(radio*radio);	        System.out.println("El area es: " + area);	    }	    	    public void perimetro(){	        double perimetro = 2*Math.PI*radio;	        System.out.println("El perimetro es: " + perimetro);	    }
+20:59:41 De  Saúl Maximiliano Mamaní Dib  a  Todos:
+	Alguien quiere hacer el 3?
+21:06:50 De  Guido Battigelli  a  Todos:
+	private double radio;		    public Circunferencia() {	    }		    public Circunferencia(double radio) {	        this.radio = radio;	    }	    	    public void crearCircunferencia(){	        Scanner sc = new Scanner(System.in);	        System.out.println("Ingrese el radio de la circunferencia");	        this.radio = sc.nextDouble();	    }	    	    public void area(){	        double area = Math.PI*(radio*radio);	        System.out.println("El area es: " + area);	    }	    	    public void perimetro(){	        double perimetro = 2*Math.PI*radio;	        System.out.println("El perimetro es: " + perimetro);	    }
+21:08:28 De  Angelina Gallelli  a  Todos:
+	creo q es por el idioma
+21:10:12 De  Nicolas  a  Todos:
+	YÑIGUEZ
+21:20:50 De  Guido Battigelli  a  Todos:
+	private double num1;	    private double num2;		    public Operacion() {	    }		    public Operacion(double num1, double num2) {	        this.num1 = num1;	        this.num2 = num2;	    }		    public double getNum1() {	        return num1;	    }		    public void setNum1(double num1) {	        this.num1 = num1;	    }		    public double getNum2() {	        return num2;	    }		    public void setNum2(double num2) {	        this.num2 = num2;	    }	    	    	    	    public void crearOperacion(){	        Scanner sc = new Scanner(System.in);	        System.out.println("Ingrese el primer numero");	        num1 = sc.nextDouble();	        System.out.println("Ingrese el segundo numero");	        num2 = sc.nextDouble();   	    }	    	    public void sumar(){   	        double suma = num1+num2;	        System.out.println("La suma es: " + suma);	    }	    	     public void restar(){   	        double resta = num1-num2;    	         System.out.println("La resta es: " + resta);	    }	    	     public void multiplicar(){
+21:21:00 De  Paulo Giménez  a  Todos:
+	mucho mas tranqui python
+21:30:15 De  Raúl Vallejos  a  Todos:
+	Salió de vacaciones Batman
+21:35:50 De  Paulo Giménez  a  Todos:
+	un lujo
+21:36:29 De  Guido Battigelli  a  Todos:
+	private double base;	    private double altura;		    public Rectangulo() {	    }		    	    public void crearRectangulo(){	        Scanner sc = new Scanner(System.in);	        System.out.println("Ingrese la base");	        base = sc.nextDouble();	        System.out.println("Ingrese la altura");	        altura = sc.nextDouble();	    }	    	    public void superficie(){      	        double superficie = base*altura;	        System.out.println("La superficie es: " + superficie);     	    }	    	     public void perimetro(){      	        double perimetro = (base+altura)*2;	        System.out.println("El perimetro es: " + perimetro);     	    }	    	    public void dibujarRectangulo(){	        	        for (int i = 0; i < altura; i++) {	            for (int j = 0; j < base; j++) {	                	                if(i == 0 || i == (altura-1)){	                    System.out.print("*");	                }else{	                    if (j == 0 || j == (base-1 )) {	                        System.out.print("*");
+21:44:39 De  Saúl Maximiliano Mamaní Dib  a  Todos:
+	Se van a llevar un bombardeo de insultos ininteligibles
+21:44:47 De  Paulo Giménez  a  Todos:
+	jajja
+21:45:09 De  Paulo Giménez  a  Todos:
+	eso será su abuela che
+21:45:10 De  Paulo Giménez  a  Todos:
+	jaja
+21:45:24 De  Paulo Giménez  a  Todos:
+	por las dudas
+21:47:39 De  Saúl Maximiliano Mamaní Dib  a  Todos:
+	Mande SCREEEN
+21:48:26 De  Saúl Maximiliano Mamaní Dib  a  Todos:
+	Los franceses no puedn decir 99
+21:48:32 De  Angelina Gallelli  a  Todos:
+	pasen ig
+21:49:40 De  Saúl Maximiliano Mamaní Dib  a  Todos:
+	No le pusiste para compartir el audio
+21:50:26 De  Paulo Giménez  a  Todos:
+	ese si se escucha
+21:50:29 De  Saúl Maximiliano Mamaní Dib  a  Todos:
+	Y encima no suena como ella
+21:50:29 De  Paulo Giménez  a  Todos:
+	pero muy bajo
+21:52:14 De  Paulo Giménez  a  Todos:
+	esta intentando dar descargas saul

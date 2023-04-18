@@ -1,0 +1,40 @@
+19:50:53 De  Victor Hugo Gimenez  a  Todos:
+	${baseType type="java.util.Scanner"}	sc = new Scanner(System.in);
+20:21:09 De  Guido Battigelli  a  Todos:
+	public void multiplicar(){	         	         if (num1 == 0 || num2 == 0) {	             System.out.println("La multiplicacion por 0 da 0");	         }else{	             double multiplicacion = num1 * num2;	             System.out.println("La multiplicacion es: " + multiplicacion);	         }	         	     }	     	     public void dividir(){	         	         if (num1 == 0 || num2 == 0) {	             System.out.println("No se puede dividir por 0 MARMOTA");	         }else{	             double division = num1 / num2;	             System.out.println("La division es: " + division);	         }	         	     }
+20:38:12 De  Guido Battigelli  a  Todos:
+	Scanner sc = new Scanner(System.in);	   	   private String titular;	   private double saldo;		    public Cuenta() {	    }		    public Cuenta(String titular, double saldo) {	        this.titular = titular;	        this.saldo = saldo;	    }		    public Scanner getSc() {	        return sc;	    }		    public void setSc(Scanner sc) {	        this.sc = sc;	    }		    public String getTitular() {	        return titular;	    }		    public void setTitular(String titular) {	        this.titular = titular;	    }		    public double getSaldo() {	        return saldo;	    }		    public void setSaldo(double saldo) {	        this.saldo = saldo;	    }	   	    public Cuenta crearCuenta(){	       	        System.out.print("Ingrese el nombre del titular de la cuenta: ");	        this.titular = sc.nextLine();	        	        System.out.print("Ingrese el saldo inicial de la cuenta: ");	        this.saldo = sc.nextDouble();            	       return new Cuenta(titular,  saldo);	    }	    	    public void depositar(Cuenta c){
+20:39:51 De  Raúl Vallejos  a  Todos:
+	Hablando de depósito digital . No está funcionando mercado pago
+20:40:59 De  Raúl Vallejos  a  Todos:
+	Si estoy esperando na tranferencia para retirar mi camioneta del mecánico.
+20:41:42 De  Cristian Castillo  a  Todos:
+	Lo que es entrar a la app funciona sin problema pero transferencia no sabría decirte, hoy a la tarde pasé de Macro a Mercado sin problema.
+20:41:50 De  Cristian Castillo  a  Todos:
+	Tipo 15 hs.
+20:47:43 De  Victor Hugo Gimenez  a  Todos:
+	Replying to "Si estoy esperando n..."
+	
+	lo mejor que podes hacer es, usar brubank como cuenta intermediaria. pasas de mercado pago a Bru y de Bru a la cuenta que vos quieras
+20:48:20 De  Cristian Castillo  a  Todos:
+	Replying to "Si estoy esperando n..."
+	
+	En que cambiaría eso?
+20:49:47 De  Victor Hugo Gimenez  a  Todos:
+	Replying to "Si estoy esperando n..."
+	
+	yo lo probe. de mercado pago a macro y tardaba mucho en llegar. pero pase a de MP a Bru y de Bru a mecro y llego de toque
+20:51:56 De  Cristian Castillo  a  Todos:
+	Replying to "Si estoy esperando n..."
+	
+	Hasta ahora no tuve demora, también puede afectar la hora.
+20:52:18 De  Cristian Castillo  a  Todos:
+	Replying to "Si estoy esperando n..."
+	
+	Las veces que pasé de Macro a Mercado lo hizo casi de inmediato.
+21:13:24 De  Marcela Garcia  a  Todos:
+	*/	package ej7juego;		import java.util.Random;	import java.util.Scanner;		public class Ej7Juego {		    private int jugador1Ganadas;	    private int jugador2Ganadas;		    public Ej7Juego() {	        jugador1Ganadas = 0;	        jugador2Ganadas = 0;	    }		    public void iniciarJuego() {	        Scanner scanner = new Scanner(System.in);	        Random random = new Random();	        int numeroAdivinar = random.nextInt(100) + 1;	        int intentos = 10;	        int intentoActual = 0;	        int numeroElegido;	        boolean acierto = false;		        System.out.println("Jugador 1, elige un número entre 1 y 100:");	        numeroElegido = scanner.nextInt();		        while (!acierto && intentoActual < intentos) {	            intentoActual++;	            System.out.println("Jugador 2, adivina el número (" + intentoActual + "/" + intentos + " intentos):");	            int numeroAdivinado = scanner.nextInt();		            if (numeroAdivinado == numeroAdivinar) {	                acierto = true;	                Syst
+21:13:44 De  Marcela Garcia  a  Todos:
+	*/	package ej7juego;		public class JuegoMain {		    public static void main(String[] args) {	        Ej7Juego juego = new Ej7Juego();	        juego.iniciarJuego();	    }	}
+21:28:56 De  MÜLLER Malena  a  Todos:
+	public void iniciar_juego(){	        Scanner sc = new Scanner (System.in);	        int c = 0, v1=0,v2=0;	        boolean salida1=false, salida2=false;	        	        do {	            System.out.println("Primer jugador");	            System.out.println("Ingrese un número");	            int num = sc.nextInt();	            System.out.println("Segundo jugador debe adivinar el número. Tiene 5 intentos.");	            do {	                System.out.println("Ingrese un número");	                int num2 = sc.nextInt();	                if (num==num2) {	                    System.out.println("Felicitaciones! Has adivinado.");	                    salida2=true;	                    	                }else{	                    if (num2>num) {	                        System.out.println("Más bajo");	                    }else{	                        if(num2<num){	                            System.out.println("Más alto");	                        }	                    }	                }	                c++;	            }
