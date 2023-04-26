@@ -1,0 +1,327 @@
+package guia9.ej1;
+
+import Servicios.CadenaServicio;
+import java.util.Scanner;
+
+/**
+ *
+ * @author juanm
+ */
+public class Guia9Ej1 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        
+        Scanner leer = new Scanner(System.in);
+        
+        CadenaServicio sc = new CadenaServicio();
+        
+        System.out.println("Ingrese una frase");
+        
+        String frase = leer.nextLine().toLowerCase();
+        
+        sc.mostrarVocales(frase);
+        
+        sc.invertidFrase(frase);
+        
+        System.out.println("Ingrese un caracter");
+        
+        String caracter = leer.next();
+        
+        sc.vecesRepetido(caracter, frase);
+        
+       System.out.println("Ingrese un caracter");
+        
+       String caracter2 = leer.next();
+       
+       if (sc.contiene(caracter, frase)){
+            System.out.println("Contiene la letra indicada");
+           
+         
+       } else {
+           
+            System.out.println("No contiene la letra ");
+       }
+       
+        System.out.println("Ingrese otra frase");
+         leer.nextLine();
+        String frase2 = leer.nextLine();
+        
+       
+        System.out.println("Longitud frase1: " + frase.length()); 
+        System.out.println("Longitud frase2: " + frase2.length()); 
+        sc.compararLongitud(frase, frase2);
+      
+        
+      sc.unirFrase(frase);
+      
+        System.out.println("Ingrese un caracter");
+        
+        String caracter3 = leer.nextLine();
+        
+      sc.reemplazar(frase, caracter3);
+      
+     
+      
+      
+    }
+    
+}
+
+xxxxxxxxxxxxxxxxxxxxxx
+
+package guia9.ej1;
+
+import Servicios.CadenaServicio;
+import java.util.Scanner;
+
+/**
+ *
+ * @author juanm
+ */
+public class Guia9Ej1 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        
+        Scanner leer = new Scanner(System.in);
+        
+        CadenaServicio sc = new CadenaServicio();
+        
+        System.out.println("Ingrese una frase");
+        
+        String frase = leer.nextLine().toLowerCase();
+        
+        sc.mostrarVocales(frase);
+        
+        sc.invertidFrase(frase);
+        
+        System.out.println("Ingrese un caracter");
+        
+        String caracter = leer.next();
+        
+        sc.vecesRepetido(caracter, frase);
+        
+       System.out.println("Ingrese un caracter");
+        
+       String caracter2 = leer.next();
+       
+       if (sc.contiene(caracter, frase)){
+            System.out.println("Contiene la letra indicada");
+           
+         
+       } else {
+           
+            System.out.println("No contiene la letra ");
+       }
+       
+        System.out.println("Ingrese otra frase");
+         leer.nextLine();
+        String frase2 = leer.nextLine();
+        
+       
+        System.out.println("Longitud frase1: " + frase.length()); 
+        System.out.println("Longitud frase2: " + frase2.length()); 
+        sc.compararLongitud(frase, frase2);
+      
+        
+      sc.unirFrase(frase);
+      
+        System.out.println("Ingrese un caracter");
+        
+        String caracter3 = leer.nextLine();
+        
+      sc.reemplazar(frase, caracter3);
+      
+     
+      
+      
+    }
+    
+}
+
+xxxxxxxxxxxxxxxxxxx
+/*Realizar una clase llamada Cadena, en el paquete de entidades, que
+tenga como atributos una frase (String) y su longitud. Agregar
+constructor vacío y con atributo frase solamente. Agregar getters y
+setters. El constructor con frase como atributo debe setear la longitud
+de la frase de manera automática. Crear una clase CadenaServicio en el
+paquete servicios que implemente los siguientes métodos:
+a) Método mostrarVocales(), deberá contabilizar la cantidad de vocales
+que tiene la frase ingresada.
+b) Método invertirFrase(), deberá invertir la frase ingresada y mostrarla
+por pantalla. Por ejemplo: Entrada: "casa blanca", Salida: "acnalb
+asac".
+c) Método vecesRepetido(String letra), recibirá un carácter ingresado
+por el usuario y contabilizar cuántas veces se repite el carácter en la
+frase, por ejemplo:
+d) Entrada: frase = "casa blanca". Salida: El carácter 'a' se repite 4
+veces.
+e) Método compararLongitud(String frase), deberá comparar la longitud
+de la frase que compone la clase con otra nueva frase ingresada por
+el usuario.
+f) Método unirFrases(String frase), deberá unir la frase contenida en la
+clase Cadena con una nueva frase ingresada por el usuario y mostrar
+la frase resultante.
+g) Método reemplazar(String letra), deberá reemplazar todas las letras
+“a” que se encuentren en la frase, por algún otro carácter
+seleccionado por el usuario y mostrar la frase resultante.
+h) Método contiene(String letra), deberá comprobar si la frase contiene
+una letra que ingresa el usuario y devuelve verdadero si la contiene y
+falso si no.
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+//Crear una clase CadenaServicio en el
+//paquete servicios que implemente los siguientes métodos:
+//a) Método mostrarVocales(), deberá contabilizar la cantidad de vocales
+//que tiene la frase ingresada.
+ 
+package Servicios;
+
+import java.util.Scanner;
+
+public class CadenaServicio {
+    Scanner sc = new Scanner(System.in);
+   public void mostrarVocales (String frase ) {
+       
+      int contador = 0;
+        
+        for (int i = 0; i < frase.length(); i++) {
+  
+                 String caracter = frase.substring(i, i+1);
+                 
+                 if (caracter.equals("a") || caracter.equals("e") || caracter.equals("i") || caracter.equals("o") || caracter.equals("u")) {
+                  
+                     contador++;
+                }
+    
+        }
+        
+        System.out.println("Vocales encontradas: " + contador);
+        
+    }
+ //b) Método invertirFrase(), deberá invertir la frase ingresada y mostrarla
+//por pantalla. Por ejemplo: Entrada: "casa blanca", Salida: "acnalb
+//asac".
+public void invertidFrase (String frase) {
+    
+    StringBuilder sb = new StringBuilder(frase);
+    String fraseInvertida = sb.reverse().toString();
+    
+    System.out.println(fraseInvertida);
+    
+    
+}
+/* Método vecesRepetido(String letra), recibirá un carácter ingresado
+por el usuario y contabilizar cuántas veces se repite el carácter en la
+frase, por ejemplo:*/
+public void vecesRepetido(String letra, String frase){
+    
+   int contador = 0;
+    for (int i = 0; i < frase.length(); i++) {
+        if (letra.equals( frase.substring(i, i+1))) {
+           contador++; 
+        }
+        
+    }
+    System.out.println("La letra aparece " + contador + " veces");
+}
+/*h) Método contiene(String letra), deberá comprobar si la frase contiene
+una letra que ingresa el usuario y devuelve verdadero si la contiene y
+falso si no.*/
+
+public boolean contiene (String caracter, String frase){
+    boolean encontrado = false;
+     for (int i = 0; i < frase.length(); i++) {
+         if  (    caracter.equals( frase.substring(i, i+1)) ){
+             encontrado = true;
+           return encontrado;  
+         }
+        
+    }
+   return encontrado;
+}   
+/*e) Método compararLongitud(String frase), deberá comparar la longitud
+de la frase que compone la clase con otra nueva frase ingresada por
+el usuario.*/
+
+public void compararLongitud(String frase1, String frase2){
+    
+   
+    
+    if (frase1.length() == frase2.length()) {
+            System.out.println("Tienen la misma longitud");
+        }else{
+            System.out.println("Tienen longitud distinta");
+        }
+    
+}
+/*f) Método unirFrases(String frase), deberá unir la frase contenida en la
+clase Cadena con una nueva frase ingresada por el usuario y mostrar
+la frase resultante.*/
+
+public void unirFrase ( String frase){
+  
+    System.out.println("Ingrese una frase");
+    
+    String frase2 = sc.nextLine();
+    
+    String fraseUnida = frase.concat(" ").concat(frase2);
+    
+    System.out.println("frase concatenada: " + fraseUnida);
+ 
+}
+
+/*
+g) Método reemplazar(String letra), deberá reemplazar todas las letras
+“a” que se encuentren en la frase, por algún otro carácter
+seleccionado por el usuario y mostrar la frase resultante.
+*/
+public void reemplazar (String frase, String letra){
+    
+    String reemplazada = " " ;
+ 
+    for (int i = 0; i < frase.length(); i++) {
+        
+        if (frase.substring(i, i+1).equals("a")  )  {
+            
+            reemplazada.concat(letra);
+       
+        }else{
+            reemplazada.concat(frase.substring(i, i+1));
+   
+        }
+   System.out.println(reemplazada);      
+        
+    }
+   
+}
+
+
+
+}
+
+/////////////////////////////
+public static void reemplazar(String frase, String letra){
+        
+        String[] retorno = new String[frase.length()];
+        
+        for (int i = 0; i < frase.length(); i++) {
+            if (frase.substring(i, i+1).equals("a")) {
+                retorno[i] = letra;
+            }else{
+                retorno[i] = frase.substring(i, i+1);
+            }
+        }
+        
+        String stringResultado = String.join("", retorno);
+        System.out.println(stringResultado);
+        
+        
+    }

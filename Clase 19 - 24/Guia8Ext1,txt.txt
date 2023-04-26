@@ -1,0 +1,68 @@
+public class RaicesServicio {
+
+    Scanner sc = new Scanner(System.in);
+    Raices r1 = new Raices ();
+    public void llenarValores() {
+
+        System.out.println("Ingrese el valor de a ; ");
+        r1.setA(sc.nextInt());
+        
+        System.out.println("Ingrese el valor de b : ");
+        r1.setB(sc.nextInt());
+        
+        System.out.println("Ingrese el valor de c : ");
+        r1.setC(sc.nextInt());
+        
+    }
+    public double getDiscriminante() {
+    
+  //(b^2)-4*a*c
+    return  r1.getB()*r1.getB()-4*r1.getA()*r1.getC();
+    
+    }
+    public boolean tieneRaices(){
+        double r2= getDiscriminante();
+        
+         return r2 >0;
+  
+        }
+     public boolean tieneRaiz(){
+         double r3= getDiscriminante();
+        
+         return r3 ==0;
+     }
+     
+    public void obtenerRaices(){
+        
+    
+    
+    if (tieneRaices()) {
+        double raiz1 = (-r1.getB()+ Math.sqrt(getDiscriminante())) / (2 * r1.getA());
+        double raiz2 = (-r1.getB() - Math.sqrt(getDiscriminante())) / (2 * r1.getA());
+        System.out.println("Las soluciones son: " + raiz1 + " y " + raiz2);
+    
+    }
+    }
+    public void obtenerRaiz(){
+       if (tieneRaiz()) {
+           double raiz = -r1.getB() / (2 * r1.getA());
+           System.out.println("La única solución es: " + raiz);
+       }
+       
+   }
+    public void calcular(){
+        if (tieneRaiz()) {
+            obtenerRaiz();
+            
+        } else if (tieneRaices()){
+            obtenerRaices();  
+            
+        }else  {
+            
+         System.out.println(" No tiene solucion ");
+        }
+    }
+
+            
+            
+}
