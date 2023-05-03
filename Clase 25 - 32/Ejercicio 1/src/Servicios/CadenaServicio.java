@@ -43,6 +43,7 @@ pantalla. Por ejemplo: Entrada: "casa blanca", Salida: "acnalb asac".
 //        }
 //        System.out.println("La frase invertida es: " + fraseAux);
         StringBuilder sb = new StringBuilder(C.getFrase());
+        
         System.out.println("La frase ingresada invertida es: " + sb.reverse());
     }
 
