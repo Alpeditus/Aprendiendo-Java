@@ -1,2 +1,0 @@
-# EGG
-Clases de Java.
