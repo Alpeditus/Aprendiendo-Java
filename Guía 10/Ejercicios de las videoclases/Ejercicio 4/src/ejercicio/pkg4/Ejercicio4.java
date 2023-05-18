@@ -35,6 +35,14 @@ public class Ejercicio4 {
         sc.mostrarPelis();
         System.out.println("");
         sc.mayorUno();
+        System.out.println("");
+        sc.ordenarMayorMenor();
+        System.out.println("");
+        sc.ordenarMenorMayor();
+        System.out.println("");
+        sc.ordenarTitulo();
+        System.out.println("");
+        sc.ordenarDirector();
     }
 
 }

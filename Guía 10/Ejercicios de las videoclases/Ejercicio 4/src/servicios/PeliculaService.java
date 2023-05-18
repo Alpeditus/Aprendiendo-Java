@@ -3,8 +3,8 @@ package servicios;
 import entidades.Pelicula;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.Scanner;
+import utilidades.Comparadores;
 
 /**
  *
@@ -55,6 +55,7 @@ public class PeliculaService {
 
     public void mayorUno() {
         //Mostrará las películas mayores a 1 hora (Java 8 en adelante).
+        System.out.println("----- Películas con duración mayor a 1 hora -----");
         peli.stream().filter((pelicula) -> (pelicula.getDuracion() > 1)).forEach((pelicula) -> {
             System.out.println(pelicula);
         });
@@ -66,10 +67,36 @@ public class PeliculaService {
             }
         });
     }
-
-    public void ordenarMayorMenor() {
-        //Ordena las películas de mayor a menor y las impríme.
-              
-         
+    
+    public void ordenarMayorMenor(){
+        Collections.sort(peli, Comparadores.ordenarMayorMenor);        
+        System.out.println("----- Películas ordenadas según su duración (mayor a menor) -----");
+        peli.forEach((pelicula)->{
+            System.out.println(pelicula.toString());
+        });
+    }
+    
+    public void ordenarMenorMayor(){
+        Collections.sort(peli, Comparadores.ordenarMayorMenor.reversed());
+        System.out.println("----- Películas ordenadas según su duración (menor a mayor) -----");
+        peli.forEach((pelicula)->{
+            System.out.println(pelicula.toString());
+        });
+    }
+    
+    public void ordenarTitulo(){
+        System.out.println("----- Lista ordenada por títulos -----");
+        Collections.sort(peli, Comparadores.ordenarPorTitulo);
+        peli.forEach((pelicula)->{
+            System.out.println(pelicula);
+        });
+    }
+    
+    public void ordenarDirector(){
+        System.out.println("----- Lista ordenada por Directores -----");
+        Collections.sort(peli, Comparadores.ordenarPorDirector);
+        peli.forEach((pelicula)->{
+            System.out.println(pelicula);
+        });
     }
 }

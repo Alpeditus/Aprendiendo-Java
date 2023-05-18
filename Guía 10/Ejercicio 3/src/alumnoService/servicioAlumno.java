@@ -74,5 +74,29 @@ public class servicioAlumno {
         if (!respuesta) {
             System.out.println("El alumno no se encuentra en la lista.");
         }
+
+//        int c = 0;
+//        System.out.println("Ingrese el Alumno a Promediar: ");
+//        String alumnoPromedio = lea.next();
+//        boolean t = false;
+//
+//        for (AlumnoEj3 cicloAlu : cursoAlumno) {
+//
+//            if (alumnoPromedio.equals(cicloAlu.getNombreAl())) {
+//                t = true;
+//                Iterator<Integer> it = cicloAlu.getNotaAl().iterator();
+//
+//                while (it.hasNext()) {
+//                    Integer next = it.next();
+//                    c += next;
+//                }
+//            }
+//        }
+//        if (t) {
+//            System.out.println("Promedio es :" + c / 3);
+//        } else {
+//            System.out.println("El Alumno no esta en la Lista:");
+//        }
     }
 }
+

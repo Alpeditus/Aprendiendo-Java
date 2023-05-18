@@ -1,0 +1,69 @@
+1) Crear una clase llamada "AgendaTelefónica" que permita almacenar contactos con su nombre y número de teléfono. 
+La clase debe tener métodos para agregar un contacto nuevo, buscar un contacto por nombre, mostrar todos los contactos y mostrar los contactos ordenados alfabéticamente por nombre.
+En el programa principal, crear un mapa (HashMap) de tipo "String" (nombre del contacto) y "Integer" (número de teléfono). Luego, mostrar un menú que le dé al usuario la opción de agregar un contacto, buscar un contacto por nombre, mostrar todos los contactos o mostrar los contactos ordenados alfabéticamente.
+
+2) En este ejercicio vamos a mostrar la tabla de posiciones final de un torneo del deporte que deseen. Para ello deberán crear una clase llamada "EquipoDe…" que represente a un equipo del deporte seleccionado. La clase debe tener los siguientes atributos: nombre del equipo, ciudad, cantidad de partidos jugados, ganados, perdidos y empatados, y puntos totales.
+En el programa principal, crear una lista de tipo "EquipoDe…" y agregar 10 objetos de tipo equipo a la lista. Luego, mostrar por pantalla de forma ordenada según cantidad de puntos los nombres de cada equipo, su cantidad de puntos, partidos jugados, ganados, perdidos y empatados.
+Una vez finalizado el torneo, determinar el equipo ganador, eliminar al último equipo de la tabla por haber descendido, sumar al nuevo equipo que ascendió de la división inferior, reiniciar los valores de partidos y puntos a 0 para el inicio del siguiente campeonato y mostrar la lista en orden alfabético de los equipos.
+
+
+3)Desarrolla una función que reciba como parámetro un ArrayList de objetos "Persona" y devuelva un HashSet con los nombres de las personas. A continuación, implementa otra función que tome este HashSet como entrada y retorne un TreeSet ordenado de los nombres. Además, crea las entidades y servicios necesarios.
+
+4) Eres el responsable de una tienda de libros y necesitas gestionar el inventario de tu tienda. Debes desarrollar un programa en Java que te permita realizar las siguientes operaciones:
+ A.  	Crear una clase Libro con los siguientes atributos: titulo (String), autor (String) y precio (double).
+ B.   	Implementar la clase InventarioLibreria que contenga las siguientes funcionalidades:
+ ·           Un ArrayList para almacenar los libros en el inventario.
+·           Un HashSet para almacenar los autores únicos de los libros en el inventario.
+·           Un TreeMap para almacenar los libros ordenados por título.
+·           Un método agregarLibro que reciba como parámetros el título, autor y precio de un libro y lo agregue al inventario.
+·           Un método obtenerAutoresUnicos que retorne el conjunto de autores únicos presentes en el inventario.
+·           Un método obtenerLibrosOrdenadosPorTitulo que retorne una lista de libros ordenados alfabéticamente por título.
+·           Un método calcularPrecioPromedio que calcule y retorne el precio promedio de todos los libros en el inventario.
+·           Un método imprimirInventario que imprima por pantalla todos los libros en el inventario, mostrando título, autor y precio.
+C.   	En el método principal (main), crea una instancia de InventarioLibreria y realiza las siguientes operaciones:
+ ·           Agrega al menos 5 libros al inventario utilizando el método agregarLibro.
+·           Muestra por pantalla los autores únicos presentes en el inventario utilizando el método obtenerAutoresUnicos.
+·           Muestra por pantalla los libros ordenados por título utilizando el método obtenerLibrosOrdenadosPorTitulo.
+·           Muestra por pantalla el precio promedio de los libros en el inventario utilizando el método calcularPrecioPromedio.
+·           Utiliza el método imprimirInventario para mostrar todos los libros en el inventario.
+
+
+5) Crear la clase “Tarea” con los siguientes atributos: título, descripción, estado (boolean) y fecha de creación. Agregar constructor vacío, con parámetros, getters, setters y demás necesario.
+Dentro del servicio vamos a crear un objeto de tipo Tarea pidiéndole los datos al usuario.Por defecto, al crear una tarea se tiene que asignar el valor de true al atributo estado, esto indicará que la tarea está en proceso.
+Posteriormente, guardamos el objeto dentro de un conjunto de Tareas, para evitar duplicados.
+Luego debemos:
+-Mostrar todas las tareas
+- Buscar una tarea por su nombre. El usuario debe ingresar el nombre de la tarea a buscar y se debe mostrar el objeto completo.
+- Modificar el estado de la tarea a false, de esta forma se considera terminada. El usuario debe ingresar el nombre de la tarea a modificar.
+- Remover una tarea. El usuario debe ingresar el nombre de la tarea a remover.
+
+6) Crear la clase "Pedido" con los siguientes atributos:  número de orden, descripción y fecha de creación. Agregar constructor vacío, con parámetros, getters, setters y demás necesario.
+Dentro del servicio vamos a crear un método para la creación del objeto Pedido, solicitando los datos al usuario. Dichos objetos creados, los vamos a guardar dentro de una lista de Pedidos.
+
+Luego debemos:
+- Buscar un pedido según el número de orden y mostrarlo.
+- Buscar un pedido según una fecha ingresada por el usuario y mostrarlo. En el caso de que no existan pedidos con esa fecha, debe informar al usuario.
+- Mostrar todos los pedidos
+- Ordenar los pedidos por fecha de creación y mostrarlos
+- Remover los 3 primeros pedidos de la lista
+
+Utilizar un switch para que el usuario elija la opción que desea:
+1)Agregar Pedido
+2)Buscar un Pedido por número de orden
+3)Buscar un Pedido por fecha de creación
+4)Mostrar todos los pedidos
+5)Ordenar y mostrar los pedidos según fecha de creación
+6)Remover un Pedido de la lista
+
+
+7) Sistema de gestión de empleados
+
+Crea un sistema de gestión de empleados en Java. Este sistema debe ser capaz de agregar, eliminar, buscar y actualizar empleados. Cada empleado debe tener un nombre, una edad, un número de identificación único y una fecha de contratación.
+
+Crea las siguientes clases de entidad:
+
+Empleado: que debe contener los atributos mencionados anteriormente.
+Crea las siguientes clases de servicios:
+
+ServicioEmpleado: que debe contener los métodos para agregar, eliminar, buscar y actualizar empleados.
+Utiliza la colección ArrayList para almacenar los empleados.

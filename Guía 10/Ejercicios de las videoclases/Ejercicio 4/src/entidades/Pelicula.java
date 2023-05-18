@@ -8,12 +8,12 @@ public class Pelicula {
     
     private String titulo;
     private String director;
-    private double duracion;
+    private Double duracion;
 
     public Pelicula() {
     }
 
-    public Pelicula(String titulo, String director, double duracion) {
+    public Pelicula(String titulo, String director, Double duracion) {
         this.titulo = titulo;
         this.director = director;
         this.duracion = duracion;
@@ -35,11 +35,11 @@ public class Pelicula {
         this.director = director;
     }
 
-    public double getDuracion() {
+    public Double getDuracion() {
         return duracion;
     }
 
-    public void setDuracion(double duracion) {
+    public void setDuracion(Double duracion) {
         this.duracion = duracion;
     }
 
