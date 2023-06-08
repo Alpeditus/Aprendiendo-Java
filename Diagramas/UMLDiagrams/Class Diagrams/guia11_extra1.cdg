@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="entidades">
+  <ClassDiagramComponents>
+    <Class name="Perro" package="entidades" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="raza" type="String" visibility="private"/>
+        <Field name="edad" type="int" visibility="private"/>
+        <Field name="documento" type="long" visibility="private"/>
+        <Field name="tamano" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="raza"/>
+          <Argument type="int" name="edad"/>
+          <Argument type="long" name="documento"/>
+          <Argument type="String" name="tamano"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getRaza" returnType="String" visibility="public"/>
+        <Method name="setRaza" returnType="void" visibility="public">
+          <Argument type="String" name="raza"/>
+        </Method>
+        <Method name="getEdad" returnType="int" visibility="public"/>
+        <Method name="setEdad" returnType="void" visibility="public">
+          <Argument type="int" name="edad"/>
+        </Method>
+        <Method name="getDocumento" returnType="long" visibility="public"/>
+        <Method name="setDocumento" returnType="void" visibility="public">
+          <Argument type="long" name="documento"/>
+        </Method>
+        <Method name="getTamano" returnType="String" visibility="public"/>
+        <Method name="setTamano" returnType="void" visibility="public">
+          <Argument type="String" name="tamano"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Persona" package="entidades" visibility="public" xPosition="706.0" yPosition="32.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="apellido" type="String" visibility="private"/>
+        <Field name="edad" type="int" visibility="private"/>
+        <Field name="documento" type="long" visibility="private"/>
+        <Field name="perro" type="Perro" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="apellido"/>
+          <Argument type="int" name="edad"/>
+          <Argument type="long" name="documento"/>
+          <Argument type="Perro" name="perro"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getApellido" returnType="String" visibility="public"/>
+        <Method name="setApellido" returnType="void" visibility="public">
+          <Argument type="String" name="apellido"/>
+        </Method>
+        <Method name="getEdad" returnType="int" visibility="public"/>
+        <Method name="setEdad" returnType="void" visibility="public">
+          <Argument type="int" name="edad"/>
+        </Method>
+        <Method name="getDocumento" returnType="long" visibility="public"/>
+        <Method name="setDocumento" returnType="void" visibility="public">
+          <Argument type="long" name="documento"/>
+        </Method>
+        <Method name="getPerro" returnType="Perro" visibility="public"/>
+        <Method name="setPerro" returnType="void" visibility="public">
+          <Argument type="Perro" name="perro"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="perro" source="entidades.Persona" target="entidades.Perro" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="entidades.Persona" target="entidades.Perro" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

@@ -5,7 +5,7 @@ package entidades;
  * @author Cristian
  */
 public class Perro {
-    
+
     private String nombre;
     private String raza;
     private int edad;
@@ -65,8 +65,6 @@ public class Perro {
 
     @Override
     public String toString() {
-        return "Perro{" + "nombre: " + nombre + ", raza: " + raza + ", edad: " + edad + ", documento: " + documento + ", tamano: " + tamano + '}';
+        return nombre + ", raza: " + raza + ", edad: " + edad + ", documento: " + documento + ", tamano: " + tamano;
     }
-    
-    
 }

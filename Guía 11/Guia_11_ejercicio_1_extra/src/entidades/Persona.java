@@ -1,27 +1,40 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package entidades;
 
 /**
  *
- * @author Cristian
+ * @author fernando
  */
 public class Persona {
-
+    
     private String nombre;
     private String apellido;
-    private int edad;
-    private long documento;
+    private Integer edad;
+    private Integer dni;
     private Perro perro;
+    
+    /*
+    Constructores
+    */
 
     public Persona() {
     }
 
-    public Persona(String nombre, String apellido, int edad, long documento, Perro perro) {
+    public Persona(String nombre, String apellido, Integer edad, Integer dni, Perro perro) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
-        this.documento = documento;
+        this.dni = dni;
         this.perro = perro;
     }
+    
+    /*
+    Getters y setters
+    */
 
     public String getNombre() {
         return nombre;
@@ -39,20 +52,20 @@ public class Persona {
         this.apellido = apellido;
     }
 
-    public int getEdad() {
+    public Integer getEdad() {
         return edad;
     }
 
-    public void setEdad(int edad) {
+    public void setEdad(Integer edad) {
         this.edad = edad;
     }
 
-    public long getDocumento() {
-        return documento;
+    public Integer getDni() {
+        return dni;
     }
 
-    public void setDocumento(long documento) {
-        this.documento = documento;
+    public void setDni(Integer dni) {
+        this.dni = dni;
     }
 
     public Perro getPerro() {
@@ -62,10 +75,15 @@ public class Persona {
     public void setPerro(Perro perro) {
         this.perro = perro;
     }
-        
+    
+    /*
+    To string
+    */
+
     @Override
     public String toString() {
-        return "Nombre: " + nombre + ", apellido: " + apellido + ", edad: " + edad + ", documento: " + documento + ". \nNombre del perro: " + perro;
+        return "Persona{" + "nombre=" + nombre + ", apellido=" + apellido + ", edad=" + edad + ", dni=" + dni + ", perro=" + perro + '}';
     }
+    
     
 }
