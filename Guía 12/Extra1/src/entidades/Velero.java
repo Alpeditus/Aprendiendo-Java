@@ -30,18 +30,14 @@ public class Velero extends Barco {
         this.mastiles = mastiles;
     }
 
-//    public int modulo(){
-//           super.eslora = super.eslora * 10 + mastiles;
-//        return super.eslora;
-//    }
-    @Override
-    public int modulo() {
-        return super.modulo() * 10 + mastiles;
+    public int moduloVelero() {
+        int modulo = super.modulo() + mastiles;
+        return modulo;
     }
 
     @Override
     public String toString() {
-        return "mastiles = " + mastiles + ".";
+        return super.toString() + "mastiles = " + mastiles + ".";
     }
-    
+
 }

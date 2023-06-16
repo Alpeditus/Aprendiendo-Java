@@ -35,9 +35,9 @@ public class YateLujo extends BarcoMotor {
         this.camarote = camarote;
     }
 
-    @Override
-    public int modulo() {
-        return super.modulo()*10 + camarote; 
+    public int moduloYate() {
+        int modulo = super.moduloBarcoMotor() + camarote; //Modulo del padre BarcoMotor.
+        return modulo; 
     }
 
     @Override

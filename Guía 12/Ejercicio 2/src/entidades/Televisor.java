@@ -1,5 +1,7 @@
 package entidades;
 
+import java.util.Scanner;
+
 /**
  * Se debe crear también una subclase llamada Televisor con los siguientes
  * atributos: resolución (en pulgadas) y sintonizador TDT (booleano), además de
@@ -59,5 +61,31 @@ public class Televisor extends Electrodomestico {
     public void setSintonizadorTDT(boolean sintonizadorTDT) {
         this.sintonizadorTDT = sintonizadorTDT;
     }
-    
+
+    public void crearTelevisor() {
+        Scanner leer = new Scanner(System.in);
+        super.crearElectrodomestico();
+        System.out.println("Ingrese resolucion del tv:");
+        resolucion = leer.nextInt();
+        System.out.println("Tiene sintonizador TDT: ");
+        String respuesta = leer.next();
+        if (respuesta.equalsIgnoreCase("si")) {
+            this.sintonizadorTDT = true;
+        }
+    }
+
+    @Override
+    public void precioFinal() {
+        super.precioFinal();
+
+        // Aumentar precio según la resolución
+        if (getResolucion() > 40) {
+            setPrecio(getPrecio() * 1.3);
+        }
+
+        // Aumentar precio si tiene sintonizador TDT
+        if (isSintonizadorTDT()) {
+            setPrecio(getPrecio() + 500);
+        }
+    }
 }

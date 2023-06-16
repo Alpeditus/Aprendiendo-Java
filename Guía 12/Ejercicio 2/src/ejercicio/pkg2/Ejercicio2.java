@@ -1,5 +1,8 @@
 package ejercicio.pkg2;
 
+import entidades.Lavadora;
+import entidades.Televisor;
+
 /**
  * Crear una superclase llamada Electrodoméstico con los siguientes atributos:
  * precio, color, consumo energético (letras entre A y F) y peso. Los
@@ -67,7 +70,13 @@ package ejercicio.pkg2;
 public class Ejercicio2 {
 
     public static void main(String[] args) {
+        Lavadora lavadora = new Lavadora();
+        Televisor tele = new Televisor();
         
+        lavadora.crearElectrodomestico();
+        System.out.println("El precio final es: " + lavadora.getPrecio());
+        tele.crearTelevisor();
+        System.out.println("El precio final es: " + tele.getPrecio());
     }
 
 }

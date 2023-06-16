@@ -1,11 +1,5 @@
 package extra1;
 
-import entidades.BarcoMotor;
-import entidades.Velero;
-import entidades.YateLujo;
-import entidades.YateLujo2;
-import java.time.LocalDate;
-import java.time.Month;
 import servicios.Alquiler;
 
 /**
@@ -37,15 +31,11 @@ import servicios.Alquiler;
  */
 public class Extra1 {
 
-   public static void main(String[] args) {
-        Velero vel = new Velero(4,10, 1020, LocalDate.of(1999,6,5));//Mastiles,eslora, matricula, años de fabricacion.
-        BarcoMotor mot = new BarcoMotor(500, 20, 1670, LocalDate.of(2001,3,28));//Potencia de motor, eslora, matricula, años de fabricacion.
-        YateLujo yl = new YateLujo(4, 500, 15, 6540, LocalDate.of(2010,9,2));//Camarote, potencia de motor, eslora, matricula, años de fabricacion.
-        YateLujo2 yate = new YateLujo2(4, 500, 15, 6540, LocalDate.of(2010,9,2));
+    public static void main(String[] args) {
         Alquiler alquiler = new Alquiler();
         
         alquiler.alquilarBarco();
-        
+
     }
 
 }

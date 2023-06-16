@@ -53,7 +53,7 @@ public class Lavadora extends Electrodomestico {
 
     public void crearLavadora() {
         Scanner leer = new Scanner(System.in);
-        crearElectrodomestico();
+        super.crearElectrodomestico();
         System.out.println("De cuantos kg es la carga: ");
         carga = leer.nextInt();
     }

@@ -17,13 +17,8 @@ public class Barco {
     protected LocalDate anioFabricacion;
 
     public int modulo() {
-        /**
-         * por un valor módulo de cada barco (obtenido simplemente multiplicando
-         * por 10 los metros de eslora)
-         */
-        this.eslora = this.eslora * 10;
-        return this.eslora;
-//        return eslora * 10;
+        int modulo = this.eslora * 10;
+        return modulo;
     }
 
     public Barco() {

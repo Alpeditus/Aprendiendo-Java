@@ -3,17 +3,16 @@ package entidades;
 import java.time.LocalDate;
 
 /**
- * 
+ *
  * @author Cristian
  */
 public class BarcoMotor extends Barco {
-    
+
     private int potenciaCV;
 
     public BarcoMotor() {
     }
 
-    
     public BarcoMotor(int potenciaCV) {
         this.potenciaCV = potenciaCV;
     }
@@ -30,15 +29,15 @@ public class BarcoMotor extends Barco {
     public void setPotenciaCV(int potenciaCV) {
         this.potenciaCV = potenciaCV;
     }
-    
-    @Override
-    public int modulo() {
-        return super.modulo() * 10 + potenciaCV;
+
+    public int moduloBarcoMotor() {
+        int modulo = super.modulo() + potenciaCV;
+        return modulo;
     }
 
     @Override
     public String toString() {
-        return "potenciaCV = " + potenciaCV + ".";
+        return super.toString() + "potenciaCV = " + potenciaCV + ".";
     }
-    
+
 }
